@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a525e26-d03c-4b6d-ac63-d7c517168b87" name="Default Changelist" comment="initial commit" />
+    <list default="true" id="3a525e26-d03c-4b6d-ac63-d7c517168b87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clash.py" beforeDir="false" afterPath="$PROJECT_DIR$/clash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/cs_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warrior.py" beforeDir="false" afterPath="$PROJECT_DIR$/warrior.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Cocky_stroller" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ivqH1AKdZBQ8K29rJGofOe10yT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,7 +33,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cocky_stroller" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
@@ -39,27 +46,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.cs_game (1)">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Cocky_stroller" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="clash (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cocky_stroller" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,32 +54,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Cocky_stroller" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Cocky_stroller/clash.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="clash" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Cocky_stroller" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Cocky_stroller" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Александр\PycharmProjects\Cocky_stroller\clash.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clash.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,11 +75,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Cocky_stroller" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Cocky_stroller/cs_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cs_game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,11 +96,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Cocky_stroller" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\Александр\PycharmProjects\Cocky_stroller\cs_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="warrior (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Cocky_stroller" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warrior.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,7 +138,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Cocky_stroller" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -165,56 +151,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Cocky_stroller" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="Cocky_stroller" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="Cocky_stroller" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.cs_game (1)" />
+        <item itemvalue="Python.warrior (1)" />
         <item itemvalue="Python.clash (1)" />
-        <item itemvalue="Python.warrior" />
-        <item itemvalue="Python.clash" />
         <item itemvalue="Python.cs_game" />
+        <item itemvalue="Python.warrior" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602841061859</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1602841343684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602841343684</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,49 +194,96 @@
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="305" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603044363259">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="305" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1603044363259" />
     <state x="441" y="239" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602833275868">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="441" y="239" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.738@0.0.1366.738" timestamp="1602833275868" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1602841299964">
+    <state x="399" y="0" key="CommitChangelistDialog2" timestamp="1603053205406">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1602841299964" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1602840981102">
+    <state x="399" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1603053205406" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1602841884651">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602840981102" />
-    <state width="1344" height="177" key="GridCell.Tab.0.bottom" timestamp="1602840932616">
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.738@0.0.1366.738" timestamp="1602841884651" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1602841791255">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="177" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1602840932616" />
-    <state width="1344" height="177" key="GridCell.Tab.0.center" timestamp="1602840932616">
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602841791255" />
+    <state width="1344" height="159" key="GridCell.Tab.0.bottom" timestamp="1603053128843">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="177" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1602840932616" />
-    <state width="1344" height="177" key="GridCell.Tab.0.left" timestamp="1602840932616">
+    <state width="1344" height="159" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603053128843" />
+    <state width="1344" height="159" key="GridCell.Tab.0.center" timestamp="1603053128842">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="177" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1602840932616" />
-    <state width="1344" height="177" key="GridCell.Tab.0.right" timestamp="1602840932616">
+    <state width="1344" height="159" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603053128842" />
+    <state width="1344" height="159" key="GridCell.Tab.0.left" timestamp="1603053128842">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="177" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1602840932616" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1602841327740">
+    <state width="1344" height="159" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603053128842" />
+    <state width="1344" height="159" key="GridCell.Tab.0.right" timestamp="1603053128843">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1602841327740" />
+    <state width="1344" height="159" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603053128843" />
+    <state width="1344" height="221" key="GridCell.Tab.1.bottom" timestamp="1603047948031">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1344" height="221" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603047948031" />
+    <state width="1344" height="221" key="GridCell.Tab.1.center" timestamp="1603047948031">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1344" height="221" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1603047948031" />
+    <state width="1344" height="221" key="GridCell.Tab.1.left" timestamp="1603047948031">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1344" height="221" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1603047948031" />
+    <state width="1344" height="221" key="GridCell.Tab.1.right" timestamp="1603047948031">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1344" height="221" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1603047948031" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1602842159472">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1602842159472" />
     <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602841154020">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1602841154020" />
+    <state x="254" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602965404561">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="254" y="104" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.738@0.0.1366.738" timestamp="1602965404561" />
     <state x="315" y="66" width="736" height="606" key="find.popup" timestamp="1602833255724">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="315" y="66" width="736" height="606" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1602833255724" />
+    <state x="443" y="159" key="git4idea.merge.GitMergeDialog" timestamp="1602842176103">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="443" y="159" key="git4idea.merge.GitMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1602842176103" />
     <state x="443" y="159" key="git4idea.merge.GitPullDialog" timestamp="1602841316059">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="443" y="159" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1602841316059" />
+    <state x="275" y="27" key="scopes" timestamp="1603039220798">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="scopes/0.0.1366.738@0.0.1366.738" timestamp="1603039220798" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
