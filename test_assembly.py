@@ -31,7 +31,7 @@ class Clash:
         self.player2 = player2
         # self.wins = 0
 
-    def start_clash(self):
+    def start(self):
         self.player1 = Warrior(player_id = id1)
         self.player2 = Warrior(player_id = id2)
         print(f"You have faced an enemy: {self.player2.name} ({self.player2.health} HP)")
@@ -54,9 +54,24 @@ class Game:
 
     def intro(self):
         print("the  C O C K Y   S T R O L L E R")
-        start_game = Clash(self.player1, self.player2)  # NB!!!!
-        return start_game.start_clash()
+        clash = Clash(self.player1, self.player2)  # NB!!!!
+        return clash.start()
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+class WarriorFactory:
+    def __init__(self, player1, player_id):
+        self.player_id = player_id
+        self.player1 = player1
+
+    def createKnight(self):
+        self.player1 = Warrior(self.player1.name, self.player1.health, player_id=id1)
+        return self.player1
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+'''    ##################
     def choose_your_destiny(self):
         print("Select your character: \n"
               "1 - Ogre \n"
@@ -75,7 +90,7 @@ class Game:
                 print("Choose your destiny (1 to 2):")
             finally:
                 pass
-
+'''    ##################
 
 if __name__ == '__main__':
     player1 = Goblin
