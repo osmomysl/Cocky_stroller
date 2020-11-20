@@ -1,4 +1,7 @@
-from warrior import Warrior
+from warrior_factory import WarriorFactory
+import random
+from datetime import datetime
+random.seed(datetime.now())
 
 
 class Clash:
@@ -6,25 +9,61 @@ class Clash:
         self.player1 = player1
         self.player2 = player2
         self.wins = 0
+        self.escapes = 0
 
-    def start_clash(self):
-        self.player1 = Warrior(self.player1.name)
-        self.player2 = Warrior(self.player2.name)
-        print(f"You have faced an enemy: {self.player2.name} ({self.player2.hp} HP) \n\
-What are you going to do: fight (f) or run away (r)?")
+    def fight_or_run(self):
         while True:
             try:
                 your_choice = input()
-                if your_choice == 'f':
-                    print("\u2694 CLASH! \u2694")
+                if your_choice.casefold() == 'f':
                     return self.combat()
-                elif your_choice == 'r':
-                    print("You ran away from the enemy. \n\
-You're still alive, but you haven't gained any glory.")
-                    print()
-                    return Clash.start_clash(self)
+                elif your_choice.casefold() == 'r':
+                    self.escapes = 0
+                    self.message_run(1)
+                    return self.start()
                 else:
-                    print("Make your decision: \u2694 (f) or \U0001F3C3 (r)?")
+                    self.message_run(2)
+            finally:
+                pass
+
+    def checkup(self):
+        if self.player1.is_alive() and self.player2.is_alive():
+            if self.player1.hp / self.player1.health < 0.5 and self.escapes == 0:
+                self.escapes += 1
+                self.message_checkup()
+                self.fight_or_run()
+            elif self.player1.hp / self.player1.health < 0.15 and self.escapes == 1:
+                self.escapes += 1
+                self.message_checkup()
+                self.fight_or_run()
+            else:
+                pass
+
+    def select_opponent(self):
+        player_id = random.randint(1, 4)
+        self.player2 = WarriorFactory.create_by_id(player_id)
+        pass
+
+    def start(self):
+        self.player1.hp = self.player1.health   # восстанавливаем здоровье player1
+        self.select_opponent()                  # создаём player2
+        if self.player2.name == self.player1.name:
+            self.player2.name = 'Dark ' + self.player2.name
+        self.message_start()
+        self.fight_or_run()
+
+    def restart(self):
+        while True:
+            try:
+                restart = input()
+                if restart.casefold() == 'y':
+                    self.wins = 0
+                    self.escapes = 0
+                    self.start()
+                elif restart.casefold() == 'n':  # !!!!!!!! "n" с первого раза на работает
+                    break
+                else:
+                    print('Choose: "yes" (y) or "no" (n)?')
             finally:
                 pass
 
@@ -34,38 +73,41 @@ You're still alive, but you haven't gained any glory.")
             self.player2.take_damage(p1_damage)
             p2_damage = self.player2.make_damage()
             self.player1.take_damage(p2_damage)
+            self.checkup()
         else:
             if self.player1.is_alive():
                 self.wins += 1
-                print(
-                    f"\U0001F339 Congratulations, brave {self.player1.name}! "
-                    f"You've overcame the {self.player2.name} \U0001F339")
-                print()
-                Clash.start_clash(self)
+                self.escapes = 0
+                self.message_victory()
+                self.start()
             else:
-                print(f"\n\
-\U0001F480 You've been killed. \n\
-   Game over. \n\
-   You achieved '{self.wins}' victories. \U0001F480")
-                print("\nRestart? (y) / (n)")
-                while True:
-                    try:
-                        restart = input()
-                        if restart == 'y':
-                            self.wins = 0
-                            Clash.start_clash(self)
-                        elif restart == 'n':
-                            break
-                        else:
-                            print("Choose: yes (y) or no (n)?")
-                    finally:
-                        pass
+                self.message_failure()
+                self.restart()
 
-'''
-if __name__ == '__main__':
-    player1 = Warrior('Knight')
-    player2 = Warrior('Ogre')
+    def message_start(self):
+        print(f"You have faced an enemy: {self.player2.name} ({self.player2.hp} HP) \n"
+              f"What are you going to do: fight (f) or run away (r)?")
 
-    play = Clash(player1, player2)
-    play.start_clash()
-'''
+    @staticmethod
+    def message_checkup():
+        print("\nYou are wounded and exhausted.\n"
+              "Do you want to save your life by leaving the battle (r) or fight to the last breath (f)?")
+
+    @staticmethod
+    def message_run(step):
+        if step == 1:
+            print("You ran away from the enemy. \n"
+                  "You're still alive, but you haven't gained any glory.\n")
+        elif step == 2:
+            print("Make your decision: \u2694 (f) or \U0001F3C3 (r)?")
+
+    def message_victory(self):
+        print(f"\n\U0001F339 Congratulations, brave {self.player1.name}! "
+              f"You've overcame the {self.player2.name} \U0001F339 \n"
+              f"Trophy count: '{self.wins}'.\n")
+
+    def message_failure(self):
+        print(f"\n\U0001F480 You've been killed. \n\
+        Game over. \n\
+        You achieved '{self.wins}' victories. \U0001F480")
+        print("\nRestart? (y) / (n)")
