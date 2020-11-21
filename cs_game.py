@@ -3,9 +3,9 @@ from warrior_factory import WarriorFactory
 
 
 class Game:
-    def __init__(self, player1, player2):
-        self.player1 = player1
-        self.player2 = player2
+    def __init__(self):       # (self, player1, player2)
+        self.player1 = None
+        self.player2 = None
 
     @staticmethod
     def intro():
@@ -27,8 +27,11 @@ class Game:
                     self.player1 = WarriorFactory.create_by_id(player_id)
                     print(f"You chose the {self.player1.name}'s way.\n")
                     break
+                else:
+                    print("Choose your destiny (1 to 4):")
+                    pass
             except ValueError:
-                print("\nChoose your destiny (1 to 4):")
+                print("Choose your destiny (1 to 4):")
             finally:
                 pass
 
@@ -40,7 +43,7 @@ class Game:
 
 
 if __name__ == '__main__':
-    game = Game(1, 2)   # почему просто (player1, player2) не работает?
+    game = Game()
     game.start()
 
 

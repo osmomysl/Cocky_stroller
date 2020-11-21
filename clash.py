@@ -13,18 +13,15 @@ class Clash:
 
     def fight_or_run(self):
         while True:
-            try:
-                your_choice = input()
-                if your_choice.casefold() == 'f':
-                    return self.combat()
-                elif your_choice.casefold() == 'r':
-                    self.escapes = 0
-                    self.message_run(1)
-                    return self.start()
-                else:
-                    self.message_run(2)
-            finally:
-                pass
+            your_choice = input()
+            if your_choice.casefold() == 'f':
+                return self.combat()
+            elif your_choice.casefold() == 'r':
+                self.escapes = 0
+                self.message_run(1)
+                return self.start()
+            else:
+                self.message_run(2)
 
     def checkup(self):
         if self.player1.is_alive() and self.player2.is_alive():
@@ -53,19 +50,17 @@ class Clash:
         self.fight_or_run()
 
     def restart(self):
+        print("\nRestart? (y) / (n)")
         while True:
-            try:
-                restart = input()
-                if restart.casefold() == 'y':
-                    self.wins = 0
-                    self.escapes = 0
-                    self.start()
-                elif restart.casefold() == 'n':  # !!!!!!!! "n" с первого раза на работает
-                    break
-                else:
-                    print('Choose: "yes" (y) or "no" (n)?')
-            finally:
-                pass
+            restart = input()
+            if restart.casefold() == 'y':
+                self.wins = 0
+                self.escapes = 0
+                self.start()
+            elif restart.casefold() == 'n':  # !!!!!!!! "n" с первого раза на работает
+                break
+            else:
+                print('Choose: "yes" (y) or "no" (n)?')
 
     def combat(self):
         while self.player1.is_alive() and self.player2.is_alive():
@@ -110,4 +105,3 @@ class Clash:
         print(f"\n\U0001F480 You've been killed. \n\
         Game over. \n\
         You achieved '{self.wins}' victories. \U0001F480")
-        print("\nRestart? (y) / (n)")
