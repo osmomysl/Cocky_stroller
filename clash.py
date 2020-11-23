@@ -11,31 +11,6 @@ class Clash:
         self.wins = 0
         self.escapes = 0
 
-    def fight_or_run(self):
-        while True:
-            your_choice = input()
-            if your_choice.casefold() == 'f':
-                return self.combat()
-            elif your_choice.casefold() == 'r':
-                self.escapes = 0
-                self.message_run(1)
-                return self.start()
-            else:
-                self.message_run(2)
-
-    def checkup(self):
-        if self.player1.is_alive() and self.player2.is_alive():
-            if self.player1.hp / self.player1.health < 0.5 and self.escapes == 0:
-                self.escapes += 1
-                self.message_checkup()
-                self.fight_or_run()
-            elif self.player1.hp / self.player1.health < 0.15 and self.escapes == 1:
-                self.escapes += 1
-                self.message_checkup()
-                self.fight_or_run()
-            else:
-                pass
-
     def select_opponent(self):
         player_id = random.randint(1, 4)
         self.player2 = WarriorFactory.create_by_id(player_id)
@@ -47,20 +22,23 @@ class Clash:
         if self.player2.name == self.player1.name:
             self.player2.name = 'Dark ' + self.player2.name
         self.message_start()
-        self.fight_or_run()
+        return self.fight_or_run()
 
-    def restart(self):
-        print("\nRestart? (y) / (n)")
+    def fight_or_run(self):
         while True:
-            restart = input()
-            if restart.casefold() == 'y':
-                self.wins = 0
+            your_choice = input()
+            if your_choice.casefold() == 'f':
+                if self.escapes == 0:
+                    return self.combat()
+                else:
+                    break
+            elif your_choice.casefold() == 'r':
                 self.escapes = 0
-                self.start()
-            elif restart.casefold() == 'n':  # !!!!!!!! "n" с первого раза на работает
-                break
+                self.message_run(1)
+                return self.start()
             else:
-                print('Choose: "yes" (y) or "no" (n)?')
+                self.message_run(2)
+                pass
 
     def combat(self):
         while self.player1.is_alive() and self.player2.is_alive():
@@ -74,10 +52,37 @@ class Clash:
                 self.wins += 1
                 self.escapes = 0
                 self.message_victory()
-                self.start()
+                return self.start()
             else:
                 self.message_failure()
-                self.restart()
+                return self.restart()
+
+    def checkup(self):
+        if self.player1.is_alive() and self.player2.is_alive():
+            if self.player1.hp / self.player1.health < 0.5 and self.escapes == 0:
+                self.escapes += 1
+                self.message_checkup()
+                return self.fight_or_run()
+            elif self.player1.hp / self.player1.health < 0.15 and self.escapes == 1:
+                self.escapes += 1
+                self.message_checkup()
+                return self.fight_or_run()
+            else:
+                pass
+
+    def restart(self):
+        print("\nRestart? (y) / (n)")
+        while True:
+            restart = input()
+            if restart.casefold() == 'y':
+                self.wins = 0
+                self.escapes = 0
+                return self.start()
+            elif restart.casefold() == 'n':  # !!!!!!!!!!!!!!!!!!!!!!! сколько раз запущен combat, столько же закрывать restart
+                break
+            else:
+                print('Choose: "yes" (y) or "no" (n)?')
+                pass
 
     def message_start(self):
         print(f"You have faced an enemy: {self.player2.name} ({self.player2.hp} HP) \n"
@@ -97,11 +102,11 @@ class Clash:
             print("Make your decision: \u2694 (f) or \U0001F3C3 (r)?")
 
     def message_victory(self):
-        print(f"\n\U0001F339 Congratulations, brave {self.player1.name}! "
-              f"You've overcame the {self.player2.name} \U0001F339 \n"
+        print(f"\n🚩 Congratulations, brave {self.player1.name}! "
+              f"You've overcame the {self.player2.name} 🚩\n"
               f"Trophy count: '{self.wins}'.\n")
 
     def message_failure(self):
-        print(f"\n\U0001F480 You've been killed. \n\
-        Game over. \n\
-        You achieved '{self.wins}' victories. \U0001F480")
+        print(f"\n💀 You've been killed.\n"
+              f"{'':3}Game over.\n"
+              f"{'':3}You achieved '{self.wins}' victories. 💀")

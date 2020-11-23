@@ -23,8 +23,20 @@ class Warrior:
         if not self.dodge():
             self.hp -= hit
             print(f"The {self.name} got hit for {hit} HP.")
-        print('{:11}'.format(self.name), "\u2764 " + self.hp * '|', self.hp if self.hp > 0 else 0)
+            self.show_hp()
         return self.hp
+
+    def show_hp(self):
+        if self.hp > 200:
+            bar = f"{self.name:>11} ❤ {100 * '|'}\n" \
+                      f"{'':15}{100 * '|'}\n" \
+                      f"{'':15}{(self.hp - 200) * '|'} {self.hp}"
+        elif 200 >= self.hp > 100:
+            bar = f"{self.name:>11} ❤ {100 * '|'}\n" \
+                      f"{'':15}{(self.hp - 100) * '|'} {self.hp}"
+        else:
+            bar = f"{self.name:>11} ❤ {self.hp * '|'} {self.hp if self.hp > 0 else 0}"
+        print(bar)
 
     def dodge(self):    # шанс увернуться от удара
         fate = random.randint(0, 100)
